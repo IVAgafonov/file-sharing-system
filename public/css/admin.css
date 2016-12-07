@@ -1,0 +1,226 @@
+/*
+@Copyright (C) 2016 Igor Agafonov
+@licenseGPL
+*/
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 46px;
+    background: #079478;
+    position: relative;
+    width: 960px;
+    margin: 0px auto;
+}
+
+header > h1 {
+    margin: 0px;
+    color: #e7ecec;
+    line-height: 46px;
+    padding: 0px 10px;
+    font-size: 16pt;
+}
+
+header > h1 > a {
+    color: #e7ecec;
+    text-decoration: none;
+}
+
+.lang {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: #079478;
+}
+
+.lang > a {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-size: 100%;
+    border: 2px solid #e7ecec;
+    border-radius: 50%;
+    border-radius: 20px;
+    margin: 6px;
+}
+
+.lang:hover > .langs {
+    display: block;
+}
+
+.langs {
+    display: none;
+    background: #15a98b;
+    width: 200px;
+    position: absolute;
+    top: 46px;
+    right: -154px;
+    float: right;
+}
+
+.langs > .langitem > a {
+    color: #e7ecec;
+    text-decoration: none;
+    line-height: 47px;
+    display: block;
+    height: 47px;
+}
+
+.langs > .langitem > a:hover {
+    background: #189e83;
+}
+
+.langs > .langitem > a > span {
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: left;
+    background-size: 100%;
+    border: 2px solid #e7ecec;
+    border-radius: 50%;
+    border-radius: 20px;
+    margin: 6px;
+}
+
+.main {
+    width: 940px;
+    margin: 0px auto;
+    background: #f3f3f3;
+    padding: 10px;
+}
+
+.main > h1 {
+    font-size: 16pt;
+    color: #333;
+}
+
+form {
+    margin: 10px 0px;
+}
+
+input {
+    font-size: 14pt;
+}
+
+span.status {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: cover;
+}
+
+span.private {
+    background-image: url(/img/locked.png);
+}
+
+span.free {
+    background-image: url(/img/free.png);
+}
+
+.table {
+    width: 100%;
+    background: #eaeaea;   
+}
+
+.table > tbody > tr:nth-child(2n) {
+    background: #e5ecf1;
+}
+
+.table > tbody > tr:nth-child(2n+1) {
+    background: #f6f9fb;
+}
+
+.c1 {
+    width: 5%;
+    text-align: center;
+}
+
+.c2 {
+    width: 5%;
+    text-align: center;
+}
+
+.c3 {
+    width: 25%;
+    text-align: center;
+}
+
+.c4 {
+    width: 10%;
+    text-align: center;
+}
+
+.c5 {
+   width: 10%;
+    text-align: center; 
+}
+
+.c6 {
+    width: 10%;
+    text-align: center;
+}
+
+.c7 {
+    width: 15%;
+    text-align: center;
+}
+
+.c8 {
+    width: 10%;
+    text-align: center;
+}
+
+.pages {
+    text-align: center;
+    padding: 15px 0px 5px 0px;
+}
+
+.pages > a {
+    background: #079478;
+    color: #fff;
+    margin: 7px 2px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.pages > a.current {
+    background: #076955;
+}
+
+.logout {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 46px;
+    height: 46px;
+}
+
+.logout > a {
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-size: 60%;
+    background-position: 50% 48%;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-image: url(/img/logout.png);
+}
+
+.tind60 {
+    text-indent: 60px;
+}
+
+.alert.alert-success {
+    background: #94e4ca;
+    padding: 10px;
+    margin: 0px;
+    list-style-type: none;
+}

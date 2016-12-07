@@ -1,0 +1,26 @@
+<div class="main">
+    <?php if(!isset($this->error)): ?> 
+    <h1>
+        <?php echo $this->translate(_("File uploaded!")); ?>
+    </h1>
+    <p>
+        <?php echo $this->translate(_("File name - ")).$this->name."."; ?>
+    </p>
+    <p class="center">
+        <a href="/dn/<?php echo $this->path; ?>" target="_blank"><?php echo $this->translate(_("Link!")); ?></a>
+    </p>
+    <p class="center">
+        <a href="/"><?php echo $this->translate(_("Upload next file!")); ?></a>
+    </p>
+    <?php else: ?>
+    <h1>
+        <?php echo $this->translate(_("Error!")); ?>
+    </h1>
+    <p class="center">
+        <?php echo $this->translate($this->error); ?>
+    </p>
+    <p class="center">
+        <a href="/"><?php echo $this->translate(_("Please try again.")); ?></a>
+    </p>
+    <?php endif; ?>
+</div>

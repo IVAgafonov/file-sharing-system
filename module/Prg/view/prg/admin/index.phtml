@@ -1,0 +1,51 @@
+<div class="main">
+    <?php echo $this->flashMessenger()->render('error', array('alert', 'alert-danger')); ?>
+    <?php echo $this->flashMessenger()->render('success', array('alert', 'alert-success')); ?>
+    <h1>
+        <?php echo $this->translate(_("Uploaded files")); ?>
+    </h1>
+    <form action="/admin" method="post" enctype="multipart/form-data">
+            <input type="text" name="filter" placeHolder="<?php echo $this->translate(_("filter")); ?>" value="<?php echo $this->filter; ?>">
+            <input type="submit" name="submit" value="<?php echo $this->translate(_("filter")); ?>">
+    </form>
+    <table class='table'>
+        <tbody>
+            <tr>
+                <th class='c1'>ID</th>
+                <th class='c2'><?php echo $this->translate(_("Status")); ?></th>
+                <th class='c3'><?php echo $this->translate(_("Name")); ?></th>
+                <th class='c4'><?php echo $this->translate(_("Size")); ?></th>
+                <th class='c5'><?php echo $this->translate(_("Downloaded")); ?></th>
+                <th class='c6'><?php echo $this->translate(_("Path")); ?></th>
+                <th class='c7'><?php echo $this->translate(_("Time stamp")); ?></th>
+                <th class='c8'><?php echo $this->translate(_("Actions")); ?></th>    
+            </tr>
+            <?php if($this->storageList): ?>
+                <?php foreach($this->storageList as $item): ?>
+                <tr>
+                    <td class='c1'><?php echo $item->getId(); ?></td>
+                    <td class='c2'><span class="status <?php echo $item->getCredential() ? 'private' : 'free'; ?>"></span></td>
+                    <td class='c3'><?php echo $item->getName(); ?></td>
+                    <td class='c4'><?php echo $this->BytesFormatHelper($item->getSize()); ?></td>
+                    <td class='c5'><?php echo $item->getDownloaded(); ?></td>
+                    <td class='c6'><?php echo $item->getPath(); ?></td>
+                    <td class='c7'><?php echo $item->getTimeStamp()->format('Y-m-d H:i:s'); ?></td>
+                    <td class='c8'>
+                        <form action="/admin<?php echo $this->page ? "/".$this->page : "/1"; ?><?php echo $this->filter ? "/".$this->filter : ""; ?>" method="post" >
+                            <input type="hidden" name="delete" value="<?php echo $item->getId(); ?>" />
+                            <input type="submit" value="<?php echo $this->translate(_("delete")); ?>" />
+                        </form>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+    </table>
+        <div class="pages">
+            <?php  echo $this->PaginationStorageFilteredHelper($this->storageList, $this->page, $this->filter,'/admin', 10); ?>
+        </div>
+    <?php else: ?>
+        <h1>
+            <?php echo $this->translate(_("List is empty.")); ?>
+        </h1>
+    <?php endif; ?>
+</div>

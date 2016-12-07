@@ -1,0 +1,74 @@
+/*
+@Copyright (C) 2016 Igor Agafonov
+@licenseGPL
+*/
+
+.main {
+    width: 320px;
+    margin: 0px auto;
+}
+
+.main > h1 {
+    font-size: 16pt;
+    color: #333;
+}
+
+.main > form > label {
+    width: 100%;
+    display: block;
+    margin: 20px 0px;
+}
+
+.main {
+    width: 300px;
+    margin: 0px auto;
+    padding: 10px;
+    background: #f3f3f3;
+}
+
+.main > p > a {
+    color: #086552;
+    text-decoration: none;
+    font-size: 13pt;
+    border-bottom: 1px dashed #086552;
+}
+
+.main > p > a:hover {
+    border-bottom: 1px solid #086552;
+}
+
+.just {
+    margin: 20px 0px;
+}
+
+.toggle {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.just > input[type="submit"] {
+    width: 150px;
+    height: 40px;
+    font-size: 14pt;
+}
+
+.just > input[type="password"]{
+    font-size: 14pt;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #dad9d9;
+    width: 96%;
+}
+.just > input[type="checkbox"]{
+    vertical-align: middle;
+}
+
+.alert.alert-danger {
+    background: #fbbdbd;
+    margin: 0px;
+    padding: 10px;
+    list-style-type: none;
+}

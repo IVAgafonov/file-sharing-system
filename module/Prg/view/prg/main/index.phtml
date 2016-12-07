@@ -1,0 +1,26 @@
+<div class="main">
+    <h1>
+        <?php echo $this->translate(_("Select file")); ?>
+    </h1>
+    <?php echo $this->flashMessenger()->render('error', array('alert', 'alert-danger'));?>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="just">
+            <input type="hidden" name="MAX_FILE_SIZE" value="32000000" />
+            <input type="file" name="file">
+        </div>
+        <div class="just">
+            <input type="checkbox" name="iscredential" id="iscredential">
+            <label>
+                <?php echo $this->translate(_('with password')); ?>
+            </label>
+        </div>
+        <div class="just toggle">
+            
+            <input type="password" name="credential" placeHolder="<?php echo $this->translate(_('password')); ?>">
+        </div>
+        <div class="just center">
+            <input type="submit" name="submit" value="<?php echo $this->translate(_("upload")); ?>">
+        </div>
+    </form>
+</div>
+

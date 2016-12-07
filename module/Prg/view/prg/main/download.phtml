@@ -1,0 +1,35 @@
+<div class="main">
+    <?php if(!isset($this->error)): ?> 
+    <h1>
+        <?php echo $this->translate(_("Download file")); ?>
+    </h1>
+    <?php echo $this->flashMessenger()->render('error', array('alert', 'alert-danger'));?>
+    <p>
+        <?php echo $this->translate(_("File name - ")).$this->name."."; ?>
+    </p>
+    
+    <form action="/dn/<?php echo $this->path; ?>" method="post">
+        <?php if(isset($this->credential) && strlen($this->credential) > 0): ?>
+        <div class="just">
+            <input type="password" name="credential" placeHolder="<?php echo $this->translate(_('password')); ?>">
+        </div>
+        <?php endif; ?>
+        <div class="just center">
+            <input type="submit" name="submit" value="<?php echo $this->translate(_("download")); ?>">
+        </div>
+    </form>
+    <p class="center">
+        <a href="/"><?php echo $this->translate(_("Upload file!")); ?></a>
+    </p>
+    <?php else: ?>
+    <h1>
+        <?php echo $this->translate(_("Error!")); ?>
+    </h1>
+    <p class="center">
+        <?php echo $this->translate($this->error); ?>
+    </p>
+    <p class="center">
+        <a href="/"><?php echo $this->translate(_("Upload file!")); ?></a>
+    </p>
+    <?php endif; ?>
+</div>

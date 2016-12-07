@@ -1,0 +1,137 @@
+/*
+@Copyright (C) 2016 Igor Agafonov
+@licenseGPL
+*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 46px;
+    background: #079478;
+    position: relative;
+    width: 320px;
+    margin: 0px auto;
+}
+
+header > h1 {
+    margin: 0px;
+    color: #e7ecec;
+    line-height: 46px;
+    padding: 0px 10px;
+    font-size: 16pt;
+}
+
+header > h1 > a {
+    color: #e7ecec;
+    text-decoration: none;
+}
+
+.lang {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: #079478;
+}
+
+.lang > a {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-size: 100%;
+    border: 2px solid #e7ecec;
+    border-radius: 50%;
+    border-radius: 20px;
+    margin: 6px;
+}
+
+.lang:hover > .langs {
+    display: block;
+}
+
+.langs {
+    display: none;
+    background: #15a98b;
+    width: 200px;
+    position: absolute;
+    top: 46px;
+    right: 0px;
+    float: right;
+}
+
+.langs > .langitem > a {
+    color: #e7ecec;
+    text-decoration: none;
+    line-height: 47px;
+    display: block;
+    height: 47px;
+}
+
+.langs > .langitem > a:hover {
+    background: #189e83;
+}
+
+.langs > .langitem > a > span {
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: left;
+    background-size: 100%;
+    border: 2px solid #e7ecec;
+    border-radius: 50%;
+    border-radius: 20px;
+    margin: 6px;
+}
+
+.lform {
+    width: 280px;
+    padding: 2px 20px 15px 20px;
+    background: #dde4e4;
+    margin: 0px auto;
+}
+
+.lform > form > dl > dd {
+    margin: 0px 0px 10px 0px;
+}
+
+.zend_form > dt > label {
+    line-height: 24px;
+    color: #2a3333;
+}
+
+.lform > h1 {
+    margin: 0px;
+    padding: 15px 0px 0px 0px;
+    font-size: 16pt;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+}
+
+.zend_form > dd > input[type='text'], .zend_form > dd > input[type='password'] {
+    width: 99%;
+    line-height: 35px;
+    font-size: 14pt;
+    text-indent: 10px;
+    border-radius: 2px;
+    border: 1px solid #a9afae;
+}
+
+.zend_form > dd > button[type='submit'] {
+    width: 100%;
+    line-height: 33px;
+    font-size: 14pt;
+    cursor: pointer;
+    border: 1px solid #a9afae;
+    border-radius: 2px;
+    margin: 25px 0px 10px 0px;
+}
+
+.zend_form > dd > button[type='submit']:hover {
+    background: #d6d6d6;
+}
